@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)file:///Users/business/Desktop/A.I.%20Training/Founder%20Frequency/Websites/business-opportunities/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Opportunities — Founder Frequency</title>
+  <meta name="description" content="Curated business resources personally recommended by Founder Frequency to help you grow revenue, scale faster, and build smarter.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d0d;
+      --surface: #161616;
+      --card: #1e1e1e;
+      --border: #2a2a2a;
+      --accent: #64b5f6;
+      --accent-dark: #3d8fd4;
+      --text: #f0f0f0;
+      --muted: #888;
+      --radius: 14px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    nav {
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .logo span { color: var(--accent); }
+    .nav-link {
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--text); }
+
+    .hero {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 5rem 2rem 3rem;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 4px 14px;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 2rem;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1rem 2rem 5rem;
+    }
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .card-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .card h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .card-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .card-features li {
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card-features li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #0d0d0d;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+      width: fit-content;
+    }
+    .card-cta:hover { background: var(--accent-dark); }
+    .card-cta:active { transform: scale(0.98); }
+    .card-cta svg { width: 14px; height: 14px; }
+
+    .add-more {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 1.5rem;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      color: var(--muted);
+      font-size: 14px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+      background: transparent;
+      width: 100%;
+      text-decoration: none;
+    }
+    .add-more:hover { border-color: var(--accent); color: var(--accent); }
+
+    .disclaimer {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem 3rem;
+    }
+    .disclaimer p {
+      font-size: 12px;
+      color: #555;
+      line-height: 1.7;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+    .disclaimer a { color: #666; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding: 3rem 1.25rem 2rem; }
+      .section { padding: 1rem 1.25rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="file:///Users/business/Desktop/A.I.%20Training/Founder%20Frequency/Websites/business-opportunities/index.html#" class="logo">Founder<span>Frequency</span></a>
+    <a href="file:///Users/business/Desktop/A.I.%20Training/Founder%20Frequency/Websites/mindset-opportunities/index.html" class="nav-link">Mindset Opportunities →</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-badge">Business Opportunities</div>
+    <h1>Build smarter.<br><em>Grow with leverage.</em></h1>
+    <p>These are the business tools, programs, and opportunities I personally recommend to founders who want to scale revenue, cut wasted effort, and build something that lasts.</p>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Featured opportunities</p>
+    <div class="grid" id="cards-container">
+
+      <!-- Opportunity 1 -->
+      <div class="card">
+        <div class="card-tag">Opportunity 01</div>
+        <h2>Own a Global Business From Day One</h2>
+        <p>A 60+ year old company operating in over 50 countries gives independent entrepreneurs a fully built business system — products, branding, training, and a compensation plan — so you can focus entirely on building your income, not building infrastructure.</p>
+        <ul class="card-features">
+          <li>Multiple income streams: retail profit, team bonuses, residual commissions</li>
+          <li>No storefront, no inventory, no employees required</li>
+          <li>Global market — build a team across borders</li>
+          <li>Proven 60+ year track record with real success stories</li>
+          <li>Low startup cost with unlimited earning ceiling</li>
+          <li>Full business mentorship and support from an active upline</li>
+        </ul>
+        <a href="file:///Users/business/Desktop/A.I.%20Training/Founder%20Frequency/Websites/business-opportunities/YOUR_AFFILIATE_LINK_HERE" class="card-cta" target="_blank" rel="noopener">
+          Explore the Opportunity
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+
+      <!-- Opportunity 2 — edit this block -->
+      <div class="card">
+        <div class="card-tag">Opportunity 02</div>
+        <h2>Your Second Opportunity Here</h2>
+        <p>Add a 2–3 sentence description of this opportunity. What does it help the reader achieve? What's the core transformation or benefit?</p>
+        <ul class="card-features">
+          <li>Key benefit or feature #1</li>
+          <li>Key benefit or feature #2</li>
+          <li>Key benefit or feature #3</li>
+        </ul>
+        <a href="file:///Users/business/Desktop/A.I.%20Training/Founder%20Frequency/Websites/business-opportunities/YOUR_AFFILIATE_LINK_HERE" class="card-cta" target="_blank" rel="noopener">
+          Learn More
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+
+    </div>
+
+    <a href="mailto:admin@founderfrequency.com?subject=New%20Business%20Opportunity" class="add-more">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
+      More opportunities coming soon
+    </a>
+  </section>
+
+  <div class="disclaimer">
+    <p>
+      <strong>Affiliate disclosure:</strong> Some of the links on this page are affiliate links. If you click through and make a purchase, Founder Frequency may earn a commission — at no extra cost to you. I only recommend resources I genuinely believe in and that align with the values of this channel.
+      <br><br>
+      Questions? <a href="mailto:admin@founderfrequency.com">admin@founderfrequency.com</a>
+    </p>
+  </div>
+
+  <footer>
+    <p>© 2025 Founder Frequency &nbsp;·&nbsp; <a href="file:///Users/business/Desktop/A.I.%20Training/Founder%20Frequency/Websites/mindset-opportunities/index.html">Mindset Opportunities</a></p>
+  </footer>
+
+
+
+</body></html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///Users/business/Downloads/Mindset_Opportunities_Landing.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mindset Opportunities — Founder Frequency</title>
+<meta name="description" content="Curated mindset resources personally recommended by Founder Frequency to help you build the psychology of a founder.">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0a0a;
+    --surface: #131313;
+    --card: #1a1a1a;
+    --border: #2a2a2a;
+    --accent: #F5FF00;
+    --accent-dark: #C7CC00;
+    --accent-glow: rgba(245,255,0,0.10);
+    --text: #f0f0f0;
+    --muted: #888;
+    --radius: 14px;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  nav {
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .logo span { color: var(--accent); }
+  .nav-link {
+    font-size: 14px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-link:hover { color: var(--text); }
+
+  .hero {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--accent);
+  }
+  .hero p {
+    font-size: 1.1rem;
+    color: var(--muted);
+    max-width: 520px;
+    margin: 0 auto 2rem;
+  }
+
+  .section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 2rem 5rem;
+  }
+  .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .card-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .card h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+  .card p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.65;
+    flex: 1;
+  }
+  .card-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .card-features li {
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card-features li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+  .card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #0a0a0a;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+    width: fit-content;
+  }
+  .card-cta:hover { background: var(--accent-dark); }
+  .card-cta:active { transform: scale(0.98); }
+  .card-cta svg { width: 14px; height: 14px; }
+
+  .add-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1.5rem;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    color: var(--muted);
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    background: transparent;
+    width: 100%;
+    text-decoration: none;
+  }
+  .add-more:hover { border-color: var(--accent); color: var(--accent); }
+
+  .disclaimer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem 3rem;
+  }
+  .disclaimer p {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.7;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+  }
+  .disclaimer a { color: #666; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--text); }
+
+  @media (max-width: 600px) {
+    .grid { grid-template-columns: 1fr; }
+    .hero { padding: 3rem 1.25rem 2rem; }
+    .section { padding: 1rem 1.25rem 3rem; }
+  }
+</style>
+</head>
+<body>
+
+  <nav>
+    <a href="file:///Users/business/Downloads/Mindset_Opportunities_Landing.html#" class="logo">Founder<span>Frequency</span></a>
+    <a href="file:///Users/business/Downloads/Business_Opportunities___Founder_Frequency.html" class="nav-link">Business Opportunities →</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-badge">Mindset Opportunities</div>
+    <h1>Build the mind.<br><em>The business follows.</em></h1>
+    <p>These are the mindset resources, books, and coaching programs I personally recommend to founders who want to think differently before they build differently.</p>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Featured opportunities</p>
+    <div class="grid" id="cards-container">
+
+      <!-- Opportunity 1 -->
+      <div class="card">
+        <div class="card-tag">Opportunity 01</div>
+        <h2>The Follow-Through Method — 1:1 Coaching</h2>
+        <p>A 1:1 coaching program for founders who already know what to build and need someone holding the line while they build it. A free session to explore the "Language of Success" and see if the fit is right.</p>
+        <ul class="card-features">
+          <li>1:1 accountability with a dedicated coach</li>
+          <li>Free complimentary session before you commit</li>
+          <li>Built for founders stuck on execution, not ideas</li>
+          <li>Structured stages, not vague motivation</li>
+        </ul>
+        <a href="file:///Users/business/Downloads/Mindset_Opportunities___Founder_Frequency.html" class="card-cta" target="_blank" rel="noopener">
+          Book Your Free Session
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+
+      <!-- Opportunity 2 — edit this block -->
+      <div class="card">
+        <div class="card-tag">Opportunity 02</div>
+        <h2>Your Second Mindset Resource Here</h2>
+        <p>Add a 2–3 sentence description of this opportunity — a book, an audiobook, a course, or a coaching program. What mindset shift does it help the reader make?</p>
+        <ul class="card-features">
+          <li>Key benefit or feature #1</li>
+          <li>Key benefit or feature #2</li>
+          <li>Key benefit or feature #3</li>
+        </ul>
+        <a href="file:///Users/business/Downloads/YOUR_AFFILIATE_LINK_HERE" class="card-cta" target="_blank" rel="noopener">
+          Learn More
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+
+    </div>
+
+    <a href="mailto:admin@founderfrequency.com?subject=New%20Mindset%20Opportunity" class="add-more">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
+      More opportunities coming soon
+    </a>
+  </section>
+
+  <div class="disclaimer">
+    <p>
+      <strong>Affiliate disclosure:</strong> Some of the links on this page are affiliate links, including Amazon Associates, Bookshop.org, and Audible links. If you click through and make a purchase, Founder Frequency may earn a commission — at no extra cost to you. I only recommend resources I genuinely believe in and that align with the values of this channel.
+      <br><br>
+      Questions? <a href="mailto:admin@founderfrequency.com">admin@founderfrequency.com</a>
+    </p>
+  </div>
+
+  <footer>
+    <p>© 2025 Founder Frequency &nbsp;·&nbsp; <a href="file:///Users/business/Downloads/Business_Opportunities___Founder_Frequency.html">Business Opportunities</a></p>
+  </footer>
+
+
+
+</body></html>
