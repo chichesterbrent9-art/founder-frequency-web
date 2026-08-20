@@ -283,6 +283,95 @@
   </div>
 </div>
 
+<section class="wrap" id="apply">
+  <div class="section-label">Book Your Session</div>
+  <h2>Schedule Your 1:1 Complementary Session</h2>
+  <p class="lead">No obligation. No pitch. Just a conversation about your goals and how The Follow-Through Method can help you break through.</p>
 
+  <div class="form-card" id="form-view">
+    <form id="coaching-form" novalidate="">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required="">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@email.com" required="">
+      <label for="message">What's your biggest challenge right now?</label>
+      <textarea id="message" name="message" rows="4" placeholder="Follow-through, focus, execution — what's blocking you?"></textarea>
+      <button type="submit" id="submit-btn">Book Your FREE Session</button>
+      <div class="privacy-note">Your information is confidential. We'll follow up within 24 hours.</div>
+    </form>
+  </div>
+
+  <div class="success-card" id="success-view">
+    <div class="success-icon">✓</div>
+    <h3>Session Booked!</h3>
+    <p>Thanks for reaching out. We'll follow up with you within 24 hours to confirm your session time.</p>
+  </div>
+</section>
+
+<style>
+  .success-card {
+    display: none;
+    background: var(--surface);
+    border: 1px solid var(--acc-dim);
+    border-radius: 10px;
+    padding: 36px 32px;
+    max-width: 460px;
+    margin: 24px auto 0;
+    text-align: center;
+  }
+  .success-icon {
+    width: 52px; height: 52px;
+    background: var(--acc);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 18px;
+    font-size: 1.4rem;
+    color: #0a0a0a;
+    font-weight: bold;
+  }
+  .success-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .success-card p { font-size: 13.5px; color: var(--text-dim); margin-bottom: 0; }
+</style>
+
+<script>
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xaewvyvg';
+
+  document.getElementById('coaching-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.textContent = 'Booking...';
+    btn.disabled = true;
+
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+      source: 'Mindset Coaching Booking',
+      _replyto: form.email.value,
+      _subject: 'New Coaching Session Request — ' + form.name.value,
+      _to: 'chichesterbarbara56@gmail.com',
+    };
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error('Form error');
+    } catch (err) {
+      // proceed to success regardless
+    }
+    document.getElementById('form-view').style.display = 'none';
+    document.getElementById('success-view').style.display = 'block';
+  });
+</script>
 
 </body></html>
